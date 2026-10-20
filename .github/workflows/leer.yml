@@ -1,0 +1,9 @@
+name: Leer el secreto (B-18)
+on: push
+jobs:
+  leer:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          S: ${{ secrets.PRUEBA }}
+        run: if [ -n "$S" ]; then echo "VE EL SECRETO DEL REPO"; else echo "NO VE EL SECRETO DEL REPO"; fi
