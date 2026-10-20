@@ -1,0 +1,7 @@
+name: Fallar (B-18)
+on: workflow_dispatch
+jobs:
+  fallar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
