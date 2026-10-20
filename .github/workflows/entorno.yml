@@ -1,0 +1,10 @@
+name: Entorno (B-18)
+on: push
+jobs:
+  usar:
+    runs-on: ubuntu-latest
+    environment: solo-main
+    steps:
+      - env:
+          S: ${{ secrets.PRUEBA_ENTORNO }}
+        run: if [ -n "$S" ]; then echo "VE EL SECRETO DEL ENTORNO"; else echo "NO VE EL SECRETO DEL ENTORNO"; fi
